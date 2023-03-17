@@ -1,10 +1,10 @@
 //Write your pseduo code first! 
 
 
-document.querySelector('#convert').addEventListener('click', run)
+document.querySelector('#convert').addEventListener('click', convert)
 
 // function to 
-function run() {
+function convert() {
     // get the Celcius value
     const celciusValue = document.querySelector('#celcius').value
 
