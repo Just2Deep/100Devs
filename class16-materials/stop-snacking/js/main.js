@@ -4,6 +4,9 @@ document.querySelector('#help').addEventListener('click', stopSnacking)
 
 function stopSnacking() {
     let number = Number(document.querySelector('input').value)
+
+    document.querySelector('#stops').innerText = ''
+    
     for (let i=1; i< number + 1; i++){
         document.querySelector('#stops').innerText += ' STOP!'
     }
