@@ -12,6 +12,6 @@ let lengthArray = movies.length;
 
 //Get the last element in that array and store it in a new variable. What if your array was really large and you didn't know the last index? Would your solution still work?
 
-let lastElement = movies[movies.length - 1];
+let lastElement = movies[ movies.length - 1 ];
 
 console.log(movies, firstMovie, lengthArray, lastElement)
