@@ -18,7 +18,7 @@ console.log(sumOfFirstThree(1, 2, 4, 4))
 
 // Create a function that takes in 2 numbers. Console log the first number to the power of the second. Call the function.
 function powerOf(n1, n2){
-    console.log(Math.pow(n1, n2))
+    console.log( Math.pow(n1, n2) )
 }
 powerOf(2, 3)
 
@@ -26,7 +26,7 @@ powerOf(2, 3)
 // Create a function that takes in a boolean and a string. If the boolean is true, alert the string. If the boolean is false, console log the string
 
 function boolAndString(bool, str) {
-    if (bool == true){
+    if (bool){
         alert(str)
     } else {
         console.log(str)
@@ -39,7 +39,7 @@ function boolAndString(bool, str) {
 function fizzbuzz(n) {
 
     for (let i = 1; i <= n; i++) {
-        if  (i % 5 === 0 && i % 3 === 0){
+        if  ( (i % 5 === 0) && (i % 3 === 0) ){
             console.log(i, 'fizzbuzz')
         } else if (i % 5 === 0) {
             console.log(i, 'Buzz');
