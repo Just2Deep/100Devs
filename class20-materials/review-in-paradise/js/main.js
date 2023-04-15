@@ -20,7 +20,8 @@ divideThreeAndMultiply(2, 4, 5)
 
 // Create a function that takes in 1 number. Console log the cube root of the number. Call the function.
 function takeOneNumber(n) {
-    console.log(Math.pow(n, 1/3))
+    // console.log(Math.pow(n, 1/3))
+    console.log( Math.cbrt(n) );
 }
 takeOneNumber(9)
 
