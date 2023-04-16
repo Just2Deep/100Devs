@@ -3,10 +3,12 @@
 function arrayNumbers(arr) {
     let res = 1;
 
-    for (let i=0; i< arr.length; i++){
-        res *= arr[i];
-    }
+    // for (let i=0; i< arr.length; i++){
+    //     res *= arr[i];
+    // }
 
+    // return res
+    arr.forEach( num => res *= num)
     return res
 }
 
