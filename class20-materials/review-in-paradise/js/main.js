@@ -27,9 +27,10 @@ takeOneNumber(9)
 
 // *Conditionals*
 //Create a function that takes in a month. If it is a summer month alert "YAY". If another other month, alert "Booo"
-const months = ["March" , "April", "May"];
+const months = ["march" , "april", "may"];
 function summerMonth(month) {
-    if (months.includes(month)){
+    
+    if (months.includes(month.toLowerCase())){
         alert('YAY')
     } else {
         alert( "Booo" )
