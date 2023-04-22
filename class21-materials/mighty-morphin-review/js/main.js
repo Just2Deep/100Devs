@@ -41,14 +41,16 @@ sampleNumbers(7, -7, 3)
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
 
-function headsTails() {
-    const result = Math.random()
-    // console.log(result)
-    if (result > 0.5){
-        return 'tails'
-    }
-    return 'heads'
-}
+// function headsTails() {
+//     const result = Math.random()
+//     // console.log(result)
+//     if (result > 0.5){
+//         return 'tails'
+//     }
+//     return 'heads'
+// }
+
+const headsTails = () => Math.random() < 0.5 ? 'heads' : 'tails';
 
 
 //*Loops*
