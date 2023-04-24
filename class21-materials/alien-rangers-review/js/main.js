@@ -25,4 +25,4 @@ function sumOfNumbers(arr) {
     return sum
 }
 
-console.log(sumOfNumbers(numbers))
+alert(sumOfNumbers(numbers))
