@@ -12,11 +12,11 @@ function StreetFighter( name, height, likes, weight ) {
     }
 
     this.legMove = () => {
-        console.log('Kick')
+        console.log('KickAss')
     }
 
     this.specialMove = () => {
-        console.log('Ninja Kick')
+        console.log('Ninja Kick Cool')
     }
 }
 
