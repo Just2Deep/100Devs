@@ -2,7 +2,7 @@
 
 //Create and array of numbers. Sum all of the numbers. Alert the sum.
 
-const newArray = [1,2,3, 5,6,9];
+const newArray = [1,2,3,5,6,9];
 alert( newArray.reduce( (sum, val) => sum += val, 0) )
 
 //Create a function that takes in an array of numbers
@@ -25,7 +25,7 @@ function reverse( str ) {
 console.log( reverse(str) )
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
-let pal = 'malama'
+let pal = 'malayalam'
 
 function palindrome( string ) {
 
