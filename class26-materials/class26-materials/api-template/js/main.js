@@ -8,7 +8,11 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
+        const name = data['species']['name']
+        const path = data['sprites']['other']['official-artwork']['front_default'];
+        console.log(path)
+        document.querySelector('img').src = path;
+        document.querySelector('h2').innerText += ': ' + name;
       })
       .catch(err => {
           console.log(`error ${err}`)
