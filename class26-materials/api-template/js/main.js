@@ -12,7 +12,7 @@ function getFetch(){
         const path = data['sprites']['other']['official-artwork']['front_default'];
         console.log(path)
         document.querySelector('img').src = path;
-        document.querySelector('h2').innerText += ': ' + name;
+        document.querySelector('h2').innerText = 'Name : ' + name;
       })
       .catch(err => {
           console.log(`error ${err}`)
