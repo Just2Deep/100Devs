@@ -1,24 +1,24 @@
 //Example fetch using pokemonapi.co
 document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('h2').innerHTML = localStorage.getItem('books')
+
 
 function getFetch(){
   const choice = document.querySelector('input').value
   console.log(choice)
-  const url = `https://api.nasa.gov/planetary/apod?api_key=iJy0Nd4wZZzfW2HFgBkNV4DDUsZ6PxL3RqQRgFfI&date=${choice}`
+  const url = `https://openlibrary.org/isbn/${choice}.json`
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+        const ourJson = data
         console.log(data)
-        if(data.media_type === "image"){
-          document.querySelector('img').src = data.hdurl
-        }else if(data.media_type === 'video'){
-          document.querySelector('iframe').src = data.url
-        }else{
-          alert('Media Not Supported - Contact NASA IMMEDIATLY')
-        }
-       
-        document.querySelector('h3').innerText = data.explanation
+        let books = (localStorage.getItem('books')) ? `${localStorage.getItem('books')} ; ${data.title}` : data.title;
+
+        localStorage.setItem('books', books)
+        
+        document.querySelector('h2').innerHTML = localStorage.getItem('books')
+        
       })
       .catch(err => {
           console.log(`error ${err}`)
