@@ -16,9 +16,7 @@ function getFetch(){
         let books = (localStorage.getItem('books')) ? `${localStorage.getItem('books')} ; ${data.title}` : data.title;
 
         localStorage.setItem('books', books)
-        
-        document.querySelector('h2').innerHTML = localStorage.getItem('books')
-        
+        document.querySelector('h2').innerHTML = localStorage.getItem('books')     
       })
       .catch(err => {
           console.log(`error ${err}`)
