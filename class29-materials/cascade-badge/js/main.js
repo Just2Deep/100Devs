@@ -38,3 +38,68 @@ const getSumOfNumbers = function(nums) {
 }
 
 console.log( getSumOfNumbers(nums))
+
+
+// Completing OOP from the jsway chapter 09
+
+
+// TODO: define the Dog class here
+// Dogs taller than 60 emote "Grrr! Grrr!" when they bark, other ones yip "Woof! Woof!".
+
+class Dog {
+    constructor(name, species, size){
+        this.name = name;
+        this.species = species;
+        this.size = size;
+    }
+
+    bark() {
+        if (this.size > 60) {
+            return "Grrr! Grrr!"
+        }
+        return "Woof! Woof!"
+    }
+}
+
+const fang = new Dog("Fang", "boarhound", 75);
+console.log(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
+console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
+
+const snowy = new Dog("Snowy", "terrier", 22);
+console.log(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
+console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
+
+
+// TODO: Let's build upon a previous account object exercise. A bank account is still defined by:
+
+// A name property.
+// A balance property, initially set to 0.
+// A credit method adding the value passed as an argument to the account balance.
+// A describe method returning the account description.
+
+class Account {
+    constructor(name){
+        this.name = name;
+        this.balance = 0;
+
+    }
+    credit( amount ) {
+        this.balance += amount;
+    }
+
+    describe() {
+        return `Owner: ${this.name}, Balance:${this.balance}`
+    }
+
+}
+
+sean = new Account('Sean')
+brad = new Account('Brad')
+georges = new Account('Georges')
+
+let accounts = [sean, brad, georges]
+
+accounts.forEach( a => {
+    a.credit(1000)
+    console.log(a.describe())
+})
