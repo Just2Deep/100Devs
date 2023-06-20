@@ -103,3 +103,48 @@ accounts.forEach( a => {
     a.credit(1000)
     console.log(a.describe())
 })
+
+
+class StopWatch {
+    constructor(){
+
+        let startTime, endTime, running, duration = 0;
+        this.start = () => {
+            if ( !running ){
+               running = true;
+
+               startTime = new Date();
+            }
+            else {
+                throw new Error('Already Running!!');
+            }
+        };
+
+        this.stop = () => {
+            if ( running ){
+                running = false;
+                endTime = new Date();
+                duration += (endTime.getSeconds() - startTime.getSeconds());
+
+            } else {
+            throw new Error('Not Running!!');
+            }
+        };
+
+        this.reset = () => {
+            startTime = 0;
+            endTime   = 0;
+            duration  = 0;
+            running   = false;
+        }
+
+        Object.defineProperty(this, 'duration' , {
+            get: function() {
+                return duration
+            }
+        })
+    }
+
+}
+
+// Added StopWatch from Mosh!!
